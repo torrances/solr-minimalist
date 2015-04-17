@@ -17,6 +17,7 @@ public final class PostDataTest {
 
 	@Test
 	public void update() throws Throwable {
+		org.junit.Assume.assumeTrue(SystemUp.check());
 
 		SolrInputDocument doc1 = new SolrInputDocument();
 		doc1.addField("id", "id" + MathUtils.random(0, Integer.MAX_VALUE), 1.0f);
