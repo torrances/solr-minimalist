@@ -8,8 +8,18 @@
 
 	<name>Solr</name>
 	<inceptionYear>2015</inceptionYear>
-	<description>Minimalist Implementation for Solr</description>
 	<url>https://github.com/torrances/solr-minimalist</url>
+	<description>
+		
+		Minimalist Implementation for Solr
+		
+		this implementation presumes an operational server with a core of "books"  
+		
+		docker container:
+		https://github.com/torrances/docker/tree/master/apache/solr
+		./run.sh
+		
+	</description>
 
 	<build>
 		<plugins>
@@ -19,8 +29,8 @@
 				<version>2.5.1</version>
 				<inherited>true</inherited>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -31,17 +41,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
-	<!--repositories>
-		<repository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
-			<url>http://repo.spring.io/snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories-->
-
 	<dependencies>
 
 		<dependency>
@@ -49,12 +48,14 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.4.1</version>
 		</dependency>
+		
 		<dependency>
 			<!-- https://github.com/torrances/java-commons/blob/master/pom.xml -->
 			<groupId>com.trimc.blogger.commons</groupId>
 			<artifactId>java-commons</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
@@ -69,6 +70,7 @@
 			<version>5</version>
 			<type>pom</type>
 		</dependency>
+		
 		<dependency>
 			<groupId>io.spring.platform</groupId>
 			<artifactId>platform-bom</artifactId>
@@ -78,13 +80,13 @@
 		</dependency>
 		
 		<!-- This is for Windows/Eclipse dev -->
-		<dependency>
+		<!--dependency>
 			<groupId>jdk.tools</groupId>
 			<artifactId>jdk.tools</artifactId>
 			<version>1.7.0_05</version>
 			<scope>system</scope>
 			<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
-		</dependency>
+		</dependency-->
 
 	</dependencies>
 
